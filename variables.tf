@@ -1,4 +1,7 @@
 variable "name" {}
 variable "cluster" {}
 variable "efs_id" {}
-varialbe "image" {}
+variable "image" {}
+variable "entrypoint" {
+  default = []
+}

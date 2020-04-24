@@ -44,13 +44,11 @@ resource "aws_ecs_task_definition" "this" {
   container_definitions = jsonencode(
     [
       {
-        name        = "home",
-        image       = var.image
-        privileged  = false,
-        environment = [],
-        entryPoint = [
-          "/service"
-        ],
+        name         = "home",
+        image        = var.image
+        privileged   = false,
+        environment  = [],
+        entryPoint   = var.entrypoint
         essential    = true,
         portMappings = [],
         volumesFrom  = [],

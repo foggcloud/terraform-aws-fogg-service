@@ -45,7 +45,7 @@ resource "aws_ecs_task_definition" "this" {
     [
       {
         name        = "home",
-        image       = "defn/irssi"
+        image       = var.image
         privileged  = false,
         environment = [],
         entryPoint = [
